@@ -20,6 +20,11 @@ namespace Moodify.Views
         {
               App.RootPage.Detail = new NavigationPage(new SignUp());
         }
+
+        private void LoginClicked(Object sender, EventArgs args)
+        {
+            App.RootPage.Detail = new NavigationPage(new SecondPage());
+        }
     }
 
 

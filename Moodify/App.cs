@@ -8,7 +8,7 @@ namespace Moodify
 		
 		public static NavigationPage NavigationPage { get; private set; }
 		public static RootPage RootPage;
-
+        public static bool isLogin = false;
 		public static bool MenuIsPresented
 		{
 			get

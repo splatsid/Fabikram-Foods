@@ -8,7 +8,9 @@ namespace Moodify
 	{
 		public HomePage()
 		{
-			InitializeComponent();
+            BindingContext = new MenuPageViewModel();
+            Title = "Menu";
+            InitializeComponent();
 		}
 	}
 }

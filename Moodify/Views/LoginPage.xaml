@@ -25,7 +25,7 @@
           HeightRequest="45"/>
 
         <Button
-          Command="{Binding SubmitCommand}"
+          Clicked="LoginClicked"
           Text="Login"
           TextColor="White"
           FontSize="20"
@@ -42,11 +42,11 @@
           HorizontalOptions="FillAndExpand"
           FontSize="20"
          />
-         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    <Image Source="food.jpg" />
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+          <Image Source="food.jpg" />
 
-      
-  </StackLayout>
+
+        </StackLayout>
       </StackLayout>
     </StackLayout>
   </ContentPage.Content>

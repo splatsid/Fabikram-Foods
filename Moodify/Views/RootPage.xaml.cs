@@ -12,5 +12,7 @@ namespace Moodify
 			InitializeComponent();
 			MasterBehavior = MasterBehavior.Popover;
 		}
+
+
 	}
 }

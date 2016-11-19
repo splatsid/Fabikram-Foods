@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.MenuPage">
-	<ContentPage.Padding>
-		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
-	</ContentPage.Padding>
-	<ContentPage.Content>
-    <Grid>
-        <Button Grid.Row ="0" Text="Home" TextColor="White" BackgroundColor="Navy" Command="{Binding GoHomeCommand}" />
-        <Button Grid.Row ="1" Text="Menu" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />
-        <Button Grid.Row ="2" Text="About us" TextColor="White" BackgroundColor ="Navy" Command="{Binding GoAboutCommand}"/>
-        <Button Grid.Row ="3" Text="Location" TextColor="White" BackgroundColor ="Navy" Command ="{Binding GoLocationCommand}"/>
-    </Grid>
-
-	</ContentPage.Content>
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 40, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical" BackgroundColor="White" HeightRequest="75">
+      <Button  Text="Home" TextColor="White" BackgroundColor="Navy" Command="{Binding GoHomeCommand}" />
+      <Button  Text="Menu" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />
+      <Button  Text="About us" TextColor="White" BackgroundColor ="Navy" Command="{Binding GoAboutCommand}"/>
+      <Button  Text="Location" TextColor="White" BackgroundColor ="Navy" Command ="{Binding GoLocationCommand}"/>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
