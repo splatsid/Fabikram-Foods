@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.SecondPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.SecondPage" Title ="Menu">
 	<ContentPage.Content>
-		<Label Text="Our Menu" VerticalOptions="Center" HorizontalOptions="Center" />
+    <ListView x:Name="listView" RowHeight="60">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+          <StackLayout Orientation="Horizontal" Padding ="5">
+            <Image Source="{Binding imageName, StringFormat='{0}.jpg'}"></Image>
+            <StackLayout Orientation="Vertical">
+              <Label Text="{Binding name}"/>
+                <Label Text="{Binding price, StringFormat = '${0}'}" TextColor="Green"/>
+            </StackLayout>
+          </StackLayout>
+         </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
 	</ContentPage.Content>
 </ContentPage>

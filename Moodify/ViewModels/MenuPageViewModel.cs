@@ -15,7 +15,7 @@ namespace Moodify
 		{
 			GoHomeCommand = new Command(GoHome);
 			GoSecondCommand = new Command(GoSecond);
-            GoAboutCommand = new Command(GoAbout);
+    
             GoLocationCommand = new Command(GoLocation);
 
         }
@@ -32,16 +32,13 @@ namespace Moodify
             App.MenuIsPresented = false;
 		}
 
-        void GoAbout(Object obj)
-        {
-            App.RootPage.Detail = new NavigationPage(new AboutPage());
-            App.MenuIsPresented = false;
-        }
-
+     
         void GoLocation(Object obj)
         {
             App.RootPage.Detail = new NavigationPage(new LocationPage());
             App.MenuIsPresented = false;
         }
-	}
+
+
+    }
 }

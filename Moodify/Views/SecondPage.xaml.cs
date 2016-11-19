@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
+using Moodify.Views;
 
 namespace Moodify
 {
@@ -10,6 +10,7 @@ namespace Moodify
 		public SecondPage()
 		{
 			InitializeComponent();
+            listView.ItemsSource = ListViewData.ProductList;
 		}
 	}
 }

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Moodify.Views.SignUp">
+  <ContentPage.Content>
+
+    <StackLayout
+      Orientation="Vertical"
+      Spacing="60">
+      <Label Text="Sign up for Fabrikam Foods" FontSize="40" HorizontalTextAlignment="Center">
+      </Label>
+      <StackLayout
+        Orientation="Vertical"
+         Padding="20,50,20,0"
+        Spacing="10">
+        <Label Text="Enter a Username" FontSize="20" FontAttributes="Bold"/>
+        <Entry
+            x:Name ="SUsername"
+            Text="{Binding SignUpUsername}"
+            Placeholder="Username"
+            HeightRequest="45" />
+        <Label Text="Enter an Email Address" FontSize="20" FontAttributes="Bold"/>
+        <Entry
+          x:Name="Email"
+          Text="{Binding eMail}"
+          Placeholder="Email"
+          HeightRequest="45"/>
+        <Label Text="Enter a Password" FontSize="20" FontAttributes="Bold"/>
+        <Entry
+            x:Name ="SPassword"
+            Text="{Binding SignUpPassword}"
+            Placeholder ="Password"
+            HeightRequest="45"/>
+        <Label Text="Please Repeat the Password" FontSize="20" FontAttributes="Bold"/>
+        <Entry
+            x:Name ="RPassword"
+            Text="{Binding RepeatedPassword}"
+            Placeholder ="Repeat Password"
+            HeightRequest="45"/>
+
+        <Button
+          Clicked="SignupClicked"
+          Text="Register"
+          TextColor="White"
+          FontSize="20"
+          BackgroundColor="Green"
+          HorizontalOptions="FillAndExpand"
+           />
+
+
+        </StackLayout>
+      </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

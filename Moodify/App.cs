@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Moodify.Views;
+using Xamarin.Forms;
 
 namespace Moodify
 {
@@ -23,7 +24,8 @@ namespace Moodify
 		public App()
 		{
 			var menuPage = new MenuPage();
-			NavigationPage = new NavigationPage(new HomePage());
+            var login = new LoginPage();
+			NavigationPage = new NavigationPage(new LoginPage());
 			RootPage = new RootPage();
 			RootPage.Master = menuPage;
 			RootPage.Detail = NavigationPage;
