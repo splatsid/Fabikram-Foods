@@ -10,6 +10,7 @@ namespace Moodify
 		public RootPage()
 		{
 			InitializeComponent();
+            if(App.isLogin)
 			MasterBehavior = MasterBehavior.Popover;
 		}
 

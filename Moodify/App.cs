@@ -8,7 +8,7 @@ namespace Moodify
 		
 		public static NavigationPage NavigationPage { get; private set; }
 		public static RootPage RootPage;
-        public static bool isLogin = false;
+        public static bool isLogin { get; set; }
 		public static bool MenuIsPresented
 		{
 			get
@@ -30,6 +30,7 @@ namespace Moodify
 			RootPage.Master = menuPage;
 			RootPage.Detail = NavigationPage;
 			MainPage = RootPage;
+            RootPage.Master.IsVisible = false;
 		}
 
 		protected override void OnStart()

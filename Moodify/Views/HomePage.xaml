@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.HomePage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.HomePage" Title="Home">
   <ContentPage.Content>
     <StackLayout>
-    <Label FontSize="20" HorizontalOptions="Center" Text="Welcome to Fabrikam Foods! "/>
-    <Label Text="Log in or sign up" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label x:Name ="HeadTitle" FontSize="20" HorizontalOptions="Center" />
+    <Label Text="Our specials and delicacies" VerticalOptions="Center" HorizontalOptions="Center" />
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

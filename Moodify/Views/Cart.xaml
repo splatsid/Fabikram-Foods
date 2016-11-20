@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.SecondPage" Title ="Menu">
-	<ContentPage.Content>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fabikram.Views.Cart" Title ="Cart">
+  <ContentPage.Content>
     <ScrollView>
+      <StackLayout>
       <ListView x:Name="listView" RowHeight="120" ItemSelected="OnItemSelected">
         <ListView.ItemTemplate>
           <DataTemplate>
@@ -18,6 +21,11 @@
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>
+        <StackLayout>
+          <Label x:Name ="priceView" FontSize="20" HorizontalOptions="Center" />
+          <Button  Text="Order" TextColor="White" BackgroundColor ="Olive" Clicked="OrderNow"/>
+        </StackLayout>
+    </StackLayout>
     </ScrollView>
-	</ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>

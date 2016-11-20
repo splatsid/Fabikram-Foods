@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.MenuPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.MenuPage" BackgroundColor="Transparent" x:Name="FrameMenu">
   <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness" iOS="0, 40, 0, 0" />
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 500, 0, 0" />
   </ContentPage.Padding>
   <ContentPage.Content>
-    <StackLayout Orientation="Vertical" BackgroundColor="White" HeightRequest="75">
-      <Button  Text="Home" TextColor="White" BackgroundColor="Navy" Command="{Binding GoHomeCommand}" />
-      <Button  Text="Menu" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />
-      <Button  Text="About us" TextColor="White" BackgroundColor ="Navy" Command="{Binding GoAboutCommand}"/>
-      <Button  Text="Location" TextColor="White" BackgroundColor ="Navy" Command ="{Binding GoLocationCommand}"/>
+    <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HeightRequest="75" Padding="0,75,0,0" >
+      <Button x:Name="Home"  Text="Home" TextColor="Black" BackgroundColor="White" Command="{Binding GoHomeCommand}"  />
+      <Button  x:Name="Menu" Text="Menu" TextColor="Black" BackgroundColor="White" Command="{Binding GoSecondCommand}" />
+      <Button  x:Name="About" Text="About us" TextColor="Black" BackgroundColor ="White" Command="{Binding GoAboutCommand}" />
+      <Button   x:Name="Location" Text="Location" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoLocationCommand}" />
+      <Button  x:Name="Favourites" Text="Favourites" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoFavouritesCommand}" />
+      <Button  x:Name="Cart" Text="Cart" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoCartCommand}" />
+
+
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

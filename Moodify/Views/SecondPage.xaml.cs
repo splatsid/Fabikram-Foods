@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using Moodify.Views;
+using Moodify.ViewModels;
 
 namespace Moodify
 {
@@ -18,7 +18,17 @@ namespace Moodify
             if (a.SelectedItem != null)
             {
                 var s = a.SelectedItem as Product;
-                await DisplayAlert("Order Placed", "You have Ordered " + s.name , "ok");
+                var action = await DisplayActionSheet("Send to", "Return", null, "Cart", "Favourites");
+
+                switch (action)
+                {
+                    case "Cart":
+                        ListViewData.CartList.Add(s);
+                        break;
+                    case "Favourites":
+                        ListViewData.addToFavourites(s);
+                        break;
+                }
                 
             }
         }

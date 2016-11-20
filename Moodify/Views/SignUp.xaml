@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.Views.SignUp">
   <ContentPage.Content>
-
+    <ScrollView>
     <StackLayout
       Orientation="Vertical"
       Spacing="60">
@@ -47,8 +47,18 @@
           HorizontalOptions="FillAndExpand"
            />
 
+        <Button
+         Clicked="ReturnToLogin"
+         Text="Return To Login"
+         TextColor="White"
+         FontSize="20"
+         BackgroundColor="Red"
+         HorizontalOptions="FillAndExpand"
+           />
 
-        </StackLayout>
+
       </StackLayout>
+    </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

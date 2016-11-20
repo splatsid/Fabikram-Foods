@@ -6,8 +6,6 @@
   <StackLayout VerticalOptions="StartAndExpand" Padding="30">
     <maps:Map WidthRequest="320" HeightRequest="200"
         x:Name="MyMap"
-        VerticalOptions="FillAndExpand"
-        HorizontalOptions="FillAndExpand"
         IsShowingUser="true"
         MapType="Hybrid"
         />
