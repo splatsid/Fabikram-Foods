@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
+using Moodify.ViewModels;
 
 namespace Moodify.DataModels
 {
@@ -18,6 +19,9 @@ namespace Moodify.DataModels
 
         [JsonProperty(PropertyName = "Email")]
         public string Email { get; set; }
+
+        [JsonProperty(PropertyName = "Favourites")]
+        public String Favourites{ get; set; }
 
 
     }

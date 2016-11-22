@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fabikram.Views.TabbedPageMeals" Title="Meals">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <ListView x:Name="listView" RowHeight="120" ItemSelected="OnItemSelected">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <StackLayout Orientation="Horizontal" Padding ="5">
+                  <Image Source="{Binding imageName, StringFormat='{0}.jpg'}"></Image>
+                  <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding name}"/>
+                    <Label Text="{Binding description}"/>
+                    <Label Text="{Binding price, StringFormat = '${0}'}" TextColor="Green"/>
+                  </StackLayout>
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout>
+          <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button  x:Name="Return" Text="Home" TextColor="White" BackgroundColor ="Blue" Clicked="GoHome" HorizontalOptions="FillAndExpand"/>
+            <Button  x:Name="Cart" Text="Cart" TextColor="White" BackgroundColor ="Green" Clicked="GoCart" HorizontalOptions="FillAndExpand" />
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+  </ContentPage>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Moodify.ViewModels;
+
 namespace Moodify.DataModels
 {
     class Order
@@ -12,8 +14,8 @@ namespace Moodify.DataModels
         [JsonProperty(PropertyName = "Id")]
         public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "Name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "OrderContents")]
+        public String Contents { get; set; }
 
         [JsonProperty(PropertyName = "Price")]
         public double Price { get; set; }

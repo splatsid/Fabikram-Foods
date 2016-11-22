@@ -16,7 +16,7 @@ namespace Fabikram.DataModels
 
         private OrderManager()
         {
-            this.client = new MobileServiceClient("http://restaurantappcontoso.azurewebsites.net");
+            this.client = new MobileServiceClient("https://restaurantappcontoso.azurewebsites.net");
             this.DetailsTable = this.client.GetTable<Order>();
 
         }
@@ -26,7 +26,7 @@ namespace Fabikram.DataModels
             get { return client; }
         }
 
-        public static OrderManager AzureManagerInstance
+        public static OrderManager OrderManagerInstance
         {
             get
             {

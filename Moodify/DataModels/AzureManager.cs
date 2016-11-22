@@ -17,7 +17,7 @@ namespace Moodify.DataModels
 
         private AzureManager()
         {
-            this.client = new MobileServiceClient("http://restaurantappcontoso.azurewebsites.net");
+            this.client = new MobileServiceClient("https://restaurantappcontoso.azurewebsites.net");
             this.DetailsTable = this.client.GetTable<JsonUserModel>();
 
         }
@@ -49,6 +49,11 @@ namespace Moodify.DataModels
         public async Task<List<JsonUserModel>> GetDetails()
         {
             return await this.DetailsTable.ToListAsync();
+        }
+
+        public async Task Update(JsonUserModel details)
+        {
+            await this.DetailsTable.UpdateAsync(details);
         }
     }
 }

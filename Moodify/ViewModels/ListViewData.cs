@@ -19,6 +19,7 @@ namespace Moodify.ViewModels
         public long id { get; set; }
         public String imageName { get; set; }
         public String description { get; set; }
+        public String easyName { get; set; }
     }
    
    public class ListViewData
@@ -34,7 +35,7 @@ namespace Moodify.ViewModels
 
         public static ObservableCollection<Product> ProductList = new ObservableCollection<Product>
         {
-            new Product { price=10.99, name="Butter Chicken", id = 5, description= "Pleb dish", imageName = "food"}
+            new Product { price=10.99, name="Butter Chicken", id = 5, description= "Pleb dish", imageName = "food", easyName="butter_chicken"}
         };
         
 

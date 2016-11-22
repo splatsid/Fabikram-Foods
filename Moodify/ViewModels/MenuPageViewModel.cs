@@ -38,7 +38,7 @@ namespace Moodify
 		{
             if (App.isLogin)
             {
-                App.RootPage.Detail = new NavigationPage(new SecondPage());
+                App.RootPage.Detail = new TabbedPage { Children = { new SecondPage(), new TabbedPageMeals() } };
                 App.MenuIsPresented = false;                
             }
             else

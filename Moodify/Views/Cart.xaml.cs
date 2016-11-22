@@ -1,4 +1,7 @@
-﻿using Moodify.ViewModels;
+﻿using Fabikram.DataModels;
+using Moodify.DataModels;
+using Moodify.ViewModels;
+using Moodify.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,9 +52,24 @@ namespace Fabikram.Views
                 }
             }
         }
-        private  void OrderNow(Object sender, EventArgs a)
+        private async void OrderNow(Object sender, EventArgs a)
         {
+            if (!ListViewData.CartList.Count.Equals(0)) 
+            {
+                Order order = new Order();
+                order.User = LoginPage.userName;
+                double price = 0;
+                foreach(Product x in ListViewData.CartList)
+                {
+                    order.Contents += x.easyName + " ";
+                    price += x.price;
+                }
+                order.Price = price;
 
+                await OrderManager.OrderManagerInstance.AddDetails(order);
+                await DisplayAlert("Complete", "Order Complete, Ready to pick up in 15 minutes", "Ok");
+                ListViewData.CartList.Clear();
+            }
         }
     }
 }

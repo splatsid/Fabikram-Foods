@@ -1,4 +1,5 @@
-﻿using Moodify.DataModels;
+﻿using Fabikram.Views;
+using Moodify.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,24 +36,32 @@ namespace Moodify.Views
             }
             else
             {
+                Activity.IsRunning = true;
                 List<JsonUserModel> x = await AzureManager.AzureManagerInstance.GetDetails();
 
                 foreach (JsonUserModel y in x)
                 {
                     if (Username.Text.Equals(y.UserName) && Password.Text.Equals(y.Password))
                     {
-                       
+                        Activity.IsRunning = false;
+                        App.RootPage.Detail = new NavigationPage(new HomePage());
                         App.isLogin = true;
                         App.RootPage.Master.IsVisible = true;
                         userName = y.UserName;
                         eMail = y.Email;
-                        App.RootPage.Detail = new NavigationPage(new HomePage());
                         break;
                     }
                 }
                 if(App.isLogin == false)
                 await DisplayAlert("Invalid Username or Password", "Incorrect username or password", "Ok");
+                Activity.IsRunning = false;
             }
+        }
+
+        private  void FacebookLogin(Object sender, EventArgs a)
+        {
+            App.RootPage.Detail = new NavigationPage(new Page1());
+
         }
     }
 
