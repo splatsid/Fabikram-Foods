@@ -14,12 +14,14 @@ namespace Moodify
         public ICommand GoAboutCommand { get; set; }
         public ICommand GoLocationCommand { get; set; }
         public ICommand GoCartCommand { get; set; }
+        public ICommand GoFavouritesCommand { get; set; }
         public MenuPageViewModel()
 		{
 			GoHomeCommand = new Command(GoHome);
 			GoSecondCommand = new Command(GoSecond);
             GoLocationCommand = new Command(GoLocation);
             GoCartCommand = new Command(GoCart);
+            GoFavouritesCommand = new Command(GoFavourites);
         }
 
 		void GoHome(object obj)
@@ -64,6 +66,13 @@ namespace Moodify
        void GoCart(Object obj)
         {
             App.RootPage.Detail = new NavigationPage(new Cart());
+            App.MenuIsPresented = false;
+        }
+
+
+        void GoFavourites(Object obj)
+        {
+            App.RootPage.Detail = new NavigationPage(new Favourites());
             App.MenuIsPresented = false;
         }
 

@@ -9,7 +9,7 @@ using Moodify.ViewModels;
 
 namespace Moodify.DataModels
 {
-    class JsonUserModel
+    public class JsonUserModel
     {
         [JsonProperty(PropertyName = "Id")]
         public string UserName { get; set; }

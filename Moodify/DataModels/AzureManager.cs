@@ -55,5 +55,10 @@ namespace Moodify.DataModels
         {
             await this.DetailsTable.UpdateAsync(details);
         }
+
+        public async Task<List<JsonUserModel>> QueryLogin( String name)
+        {
+             return await this.DetailsTable.Where(JsonUserModel => JsonUserModel.UserName == name).ToListAsync();
+        }
     }
 }

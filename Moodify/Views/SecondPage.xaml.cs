@@ -22,12 +22,12 @@ namespace Moodify
             {
                 var s = a.SelectedItem as Product;
                 var action = await DisplayActionSheet("Send to", "Return", null, "Cart", "Favourites");
+                listView.SelectedItem = null;
 
                 switch (action)
                 {
                     case "Cart":
                         ListViewData.CartList.Add(s);
-
                         break;
                     case "Favourites":
                         List<JsonUserModel> z = await AzureManager.AzureManagerInstance.GetDetails();
@@ -37,14 +37,24 @@ namespace Moodify
                             {
                                 if(temp.Favourites == null)
                                 {
-                                    temp.Favourites = new List<Product>();
+                                    temp.Favourites = "";
                                 }
-                                temp.Favourites.Add(s);
-                                await AzureManager.AzureManagerInstance.Update(temp);
+                                if (!temp.Favourites.Contains(s.easyName))
+                                {
+                                    temp.Favourites += (temp.Favourites + s.easyName + " ");
+                                    await AzureManager.AzureManagerInstance.Update(temp);
+                                    await DisplayAlert("Added", (s.name + " Was added to your favourites!"), "Return");
+                                }else
+                                {
+                                    await DisplayAlert("Already Exists", (s.name + " Already exists in your favourites!"), "Return");
+
+                                }
+
                                 break;
                             }
                         }
                         break;
+                   
                 }
                 
             }

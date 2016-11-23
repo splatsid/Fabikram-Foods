@@ -29,7 +29,7 @@ namespace Moodify.ViewModels
 
         public static void addToFavourites(Product p)
         {
-            
+            FavouriteList.Add(p);  
         }
 
 

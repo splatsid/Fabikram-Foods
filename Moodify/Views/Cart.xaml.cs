@@ -35,6 +35,7 @@ namespace Fabikram.Views
             {
                 var s = a.SelectedItem as Product;
                 var x = await DisplayActionSheet("Action", "Ok", null, "Remove From Cart");
+                listView.SelectedItem = null;
 
                 switch (x)
                 {

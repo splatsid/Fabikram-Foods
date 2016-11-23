@@ -25,7 +25,7 @@ namespace Fabikram.Views
             {
                 var s = a.SelectedItem as Product;
                 var action = await DisplayActionSheet("Send to", "Return", null, "Cart", "Favourites");
-
+                listView.SelectedItem = null;
                 switch (action)
                 {
                     case "Cart":
