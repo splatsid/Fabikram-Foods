@@ -13,7 +13,7 @@ namespace Moodify
         public SecondPage()
         {
             InitializeComponent();
-            listView.ItemsSource = ListViewData.ProductList;
+            listView.ItemsSource = ListViewData.DrinkList;
         }
 
             private async void OnItemSelected(object sender, SelectedItemChangedEventArgs a)
@@ -41,7 +41,8 @@ namespace Moodify
                                 }
                                 if (!temp.Favourites.Contains(s.easyName))
                                 {
-                                    temp.Favourites += (temp.Favourites + s.easyName + " ");
+                                    temp.Favourites += (s.easyName + " ");
+                                    ListViewData.FavouriteList.Add(s);
                                     await AzureManager.AzureManagerInstance.Update(temp);
                                     await DisplayAlert("Added", (s.name + " Was added to your favourites!"), "Return");
                                 }else

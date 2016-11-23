@@ -4,6 +4,8 @@
     <StackLayout>
     <Label x:Name ="HeadTitle" FontSize="20" HorizontalOptions="Center" />
     <Label Text="Our specials and delicacies" VerticalOptions="Center" HorizontalOptions="Center" />
+      <Label Text="Our restaurant is located in of Wynyard Quarter at 22 Viaduct Harbour Ave" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" />
+      <Label x:Name="Location" Text="" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" />
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

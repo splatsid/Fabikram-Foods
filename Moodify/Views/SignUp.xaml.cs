@@ -1,12 +1,7 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
-using Moodify.DataModels;
+﻿using Moodify.DataModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
+using PCLCrypto;
 
 namespace Moodify.Views
 {
@@ -46,13 +41,14 @@ namespace Moodify.Views
 
         public async void writeToDB()
         {
+
+
             JsonUserModel details = new JsonUserModel()
             {
                 UserName = SUsername.Text,
                 Email = Email.Text,
                 Password = SPassword.Text
             };
-
             await AzureManager.AzureManagerInstance.AddDetails(details);
             SUsername.Text = "";
             Email.Text = "";

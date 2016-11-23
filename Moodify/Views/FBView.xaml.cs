@@ -9,6 +9,7 @@ using Moodify.Views;
 using Moodify;
 using Moodify.DataModels;
 using System.Collections.Generic;
+using Moodify.ViewModels;
 
 namespace Fabikram.Views
 {
@@ -55,7 +56,7 @@ namespace Fabikram.Views
             App.isLogin = true;
             App.RootPage.Master.IsVisible = true;
             App.RootPage.Detail = new NavigationPage(new HomePage());
-
+           
             List<JsonUserModel> x = await AzureManager.AzureManagerInstance.QueryLogin(result.name);
             if(x.Count == 0)
             {
@@ -65,6 +66,11 @@ namespace Fabikram.Views
                 };
 
                 await AzureManager.AzureManagerInstance.AddDetails(details);
+            }else
+            {
+                LoginPage.usermodel = x[0];
+                ListViewData.populateHashMap();
+                LoginPage.checkFavs();
             }
         }
 

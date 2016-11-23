@@ -23,6 +23,5 @@ namespace Moodify.DataModels
         [JsonProperty(PropertyName = "Favourites")]
         public String Favourites{ get; set; }
 
-
     }
 }

@@ -61,6 +61,7 @@ namespace Moodify.Views
                     App.RootPage.Master.IsVisible = true;
                     userName =Username.Text;
                     usermodel = x[0];
+                    ListViewData.populateHashMap();
                     checkFavs();
                 }
 
@@ -71,26 +72,26 @@ namespace Moodify.Views
             }
         }
 
-        private async void checkFavs()
+        public static async void checkFavs()
         {
             if (ListViewData.FavouriteList.Count == 0)
             {
                 List<JsonUserModel> x = await AzureManager.AzureManagerInstance.QueryLogin(LoginPage.userName);
-                String[] favsplit = x[0].Favourites.Split();
-                foreach (String z in favsplit)
-                {
-                    ListViewData.addToFavourites(new Product()
+             
+                    if (x[0].Favourites != null && x[0].Favourites != "")
                     {
-                        easyName = z,
-                        imageName = z,
-                        name = FirstCharToUpper(Regex.Replace(z, @"_", " ")),
-                        description = "deschere",
-                        price = 10.99
-                    });
-                }
+                        x[0].Favourites = x[0].Favourites.TrimEnd();
+                        String[] favsplit = x[0].Favourites.Split();
+                        foreach (String z in favsplit)
+                        {
+                        Product temp = new Product();
+                        ListViewData.totalproductlist.TryGetValue(z, out temp);
+                        if(temp.easyName != null)
+                        ListViewData.addToFavourites(temp);
+                        }
+                    }
+                
             }
-            ObservableCollection<Product> zysd = ListViewData.FavouriteList;
-
         }
 
         private  void FacebookLogin(Object sender, EventArgs a)
@@ -106,6 +107,8 @@ namespace Moodify.Views
             return str.ToUpper();
         }
     }
+
+
 
 }
 

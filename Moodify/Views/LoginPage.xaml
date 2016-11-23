@@ -6,10 +6,11 @@
   <ContentPage.Content>
     <StackLayout
       Orientation="Vertical"
-      Spacing="20">
+      Spacing="15">
       <Label Text="Fabrikam Foods" FontSize="40" HorizontalTextAlignment="Center">
-      </Label>
-      <StackLayout
+        </Label>
+      <Label Text="Food of the future" FontSize="20" HorizontalTextAlignment="Center"/>
+        <StackLayout
         Orientation="Vertical"
          Padding="0,20,0,0"
         Spacing="10">
@@ -54,7 +55,7 @@
         FontSize="20"
          />
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-          <Image Source="food.jpg" />
+          <Image Source="restaurantlogo.png" />
 
 
         </StackLayout>
