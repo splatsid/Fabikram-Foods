@@ -21,7 +21,7 @@ namespace Moodify.Views
             }else if (SUsername.Text != "" && Email.Text!= "" && SPassword.Text!=""){
                 if (SPassword.Text.Equals(RPassword.Text))
                 {
-                    App.RootPage.Detail = new NavigationPage(new LoginPage());
+                    App.RootPage.Detail = new NavigationPage(new LoginPage()) { BarBackgroundColor = Color.Black };
                     writeToDB();
                 }else
                 {

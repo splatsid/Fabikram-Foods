@@ -1,4 +1,5 @@
-﻿using Moodify.DataModels;
+﻿using Moodify;
+using Moodify.DataModels;
 using Moodify.ViewModels;
 using Moodify.Views;
 using System;
@@ -52,7 +53,12 @@ namespace Fabikram.Views
             }
         }
 
-  
+        private void GoCart(object sender, EventArgs a)
+        {
+            App.RootPage.Detail = new NavigationPage(new Cart());
+        }
+
+
     }
 }
 

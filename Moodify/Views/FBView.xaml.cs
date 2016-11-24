@@ -55,7 +55,7 @@ namespace Fabikram.Views
             LoginPage.userName = result.name;
             App.isLogin = true;
             App.RootPage.Master.IsVisible = true;
-            App.RootPage.Detail = new NavigationPage(new HomePage());
+            App.RootPage.Detail = new NavigationPage(new HomePage()) ;
            
             List<JsonUserModel> x = await AzureManager.AzureManagerInstance.QueryLogin(result.name);
             if(x.Count == 0)

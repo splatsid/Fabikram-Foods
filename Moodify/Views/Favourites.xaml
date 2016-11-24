@@ -4,7 +4,9 @@
              x:Class="Fabikram.Views.Favourites"
              Title="Favourites">
   <ContentPage.Content>
+    
     <ScrollView>
+      <StackLayout>
         <ListView x:Name="listView" RowHeight="120" ItemSelected="OnItemSelected">
           <ListView.ItemTemplate>
             <DataTemplate>
@@ -21,6 +23,8 @@
             </DataTemplate>
           </ListView.ItemTemplate>
         </ListView>
+        <Button  x:Name="Cart" Text="Cart" TextColor="White" BackgroundColor ="Green" Clicked="GoCart" HorizontalOptions="FillAndExpand" />
+      </StackLayout>
     </ScrollView>
   </ContentPage.Content>
 </ContentPage>

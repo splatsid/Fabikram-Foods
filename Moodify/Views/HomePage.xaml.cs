@@ -62,7 +62,8 @@ namespace Moodify
 
         public void GoAbout(object Sender, EventArgs a)
         {
-           
+            App.RootPage.Detail = new NavigationPage(new About());
+            App.MenuIsPresented = false;
         }
 
         public void GoFavourites(object Sender, EventArgs a)

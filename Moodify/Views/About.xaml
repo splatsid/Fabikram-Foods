@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fabikram.Views.About">
+  <StackLayout>
+    <Label Text="Our mission is to provide an ethical delicious meal for the minds of the future." VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" XAlign="Center" />
+    <Image Source="restaurantlogo.png" />
+    <Label x:Name="MissionStatement" Text="Fabrikam Foods is a restaurant chain that was established in 2016 by Sid Partha. The chains were established on the basis that
+the young minds of the future require a place to socialize, eat, and discuss ideas. We at Fabikram Foods have exactly provided this a restaurant space for techies and anyone else alike
+to lounge in and discuss their ideas all while having delicious food to eat. At Fabrikam Foods all meat and dairy products are sourced ethically ensuring that you can enjoy a guilt free meal with us
+all while you are refuelling your mind and body to keep those ideas of the future coming."  VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" FontSize="18" XAlign="Center" />
+    <Label  Text="" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" FontSize="16" XAlign="Center"/>
+    </StackLayout>
+</ContentPage>

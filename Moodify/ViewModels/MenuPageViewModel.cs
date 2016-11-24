@@ -19,12 +19,18 @@ namespace Moodify
 		{
 			GoHomeCommand = new Command(GoHome);
 			GoSecondCommand = new Command(GoSecond);
-            GoLocationCommand = new Command(GoLocation);
             GoCartCommand = new Command(GoCart);
             GoFavouritesCommand = new Command(GoFavourites);
+            GoAboutCommand = new Command(GoAbout);
         }
 
-		void GoHome(object obj)
+        void GoAbout(Object obj)
+        {
+            App.RootPage.Detail = new NavigationPage(new About());
+            App.MenuIsPresented = false;
+        }
+
+        void GoHome(object obj)
 		{
             if (App.isLogin)
             {
@@ -40,7 +46,7 @@ namespace Moodify
 		{
             if (App.isLogin)
             {
-                App.RootPage.Detail = new TabbedPage { Children = { new SecondPage(), new TabbedPageMeals() } };
+                App.RootPage.Detail = new TabbedPage { Children = { new SecondPage()  , new TabbedPageMeals()  } };
                 App.MenuIsPresented = false;                
             }
             else
@@ -50,18 +56,7 @@ namespace Moodify
         }
 
      
-        void GoLocation(Object obj)
-        {
-            if (App.isLogin)
-            {
-                App.RootPage.Detail = new NavigationPage(new LocationPage());
-                App.MenuIsPresented = false;
-            }
-            else
-            {
-                DisplayAlert("Not Logged in", "Please log in", "Ok");
-            }
-        }
+
 
        void GoCart(Object obj)
         {
