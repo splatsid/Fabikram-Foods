@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Moodify.HomePage" Title="Home">
   <ContentPage.Content>
+    <ScrollView>
     <StackLayout>
-    <Label x:Name ="HeadTitle" FontSize="20" HorizontalOptions="Center" />
-    <Label Text="Our specials and delicacies" VerticalOptions="Center" HorizontalOptions="Center" />
-      <Label Text="Our restaurant is located in of Wynyard Quarter at 22 Viaduct Harbour Ave" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" />
-      <Label x:Name="Location" Text="" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" />
+    <Label x:Name ="HeadTitle" FontSize="25" HorizontalOptions="Center" />
+    <Label Text="Fabrikam Foods is food for the future." VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" XAlign="Center" />
+      <Label Text="Our restaurant is located in of Wynyard Quarter at 22 Viaduct Harbour Ave" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" FontSize="18" XAlign="Center"/>
+      <Image Source="wynyardqtr.jpg" />
+      <Label x:Name="Location" Text="" VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" FontSize="18" XAlign="Center" />
+      <Label  Text="Come to the heart of the city and enjoy a meal with us! Our restaurant is 
+an establishment where all people, young and old come to enjoy a delicious meal.
+We intend to provide quality customer service to all that come to us for service and no less.
+Fabrikam Foods is a place where technological minds and alike can meet 
+for a snack, for a business meeting or for even a meal. All our diary and meat products are ethically sourced and are catered for a sustainable future.
+You can enjoy a guilt free meal with us." VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode ="WordWrap" FontSize="16" XAlign="Center"/>
+      <Button  x:Name="Menu" Text="Menu" TextColor="White" BackgroundColor="Black" Clicked="GoSecond" />
+      <Button  x:Name="About" Text="About us" TextColor="White" BackgroundColor ="Black" Clicked="GoAbout" />
+      <Button  x:Name="Favourites" Text="Favourites" TextColor="White" BackgroundColor="Black" Clicked ="GoFavourites" />
     </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

@@ -8,7 +8,6 @@
       <Button x:Name="Home"  Text="Home" TextColor="Black" BackgroundColor="White" Command="{Binding GoHomeCommand}"  />
       <Button  x:Name="Menu" Text="Menu" TextColor="Black" BackgroundColor="White" Command="{Binding GoSecondCommand}" />
       <Button  x:Name="About" Text="About us" TextColor="Black" BackgroundColor ="White" Command="{Binding GoAboutCommand}" />
-      <Button   x:Name="Location" Text="Location" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoLocationCommand}" />
       <Button  x:Name="Favourites" Text="Favourites" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoFavouritesCommand}" />
       <Button  x:Name="Cart" Text="Cart" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoCartCommand}" />
 

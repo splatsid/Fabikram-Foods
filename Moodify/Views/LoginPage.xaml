@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.Views.LoginPage"
-              BackgroundColor="White">
+              BackgroundColor="White"
+             Title="Login">
   <ContentPage.Content>
     <StackLayout
       Orientation="Vertical"
       Spacing="15">
       <Label Text="Fabrikam Foods" FontSize="40" HorizontalTextAlignment="Center">
         </Label>
-      <Label Text="Food of the future" FontSize="20" HorizontalTextAlignment="Center"/>
+      <Label Text="Food for the future" FontSize="20" HorizontalTextAlignment="Center"/>
         <StackLayout
         Orientation="Vertical"
          Padding="0,20,0,0"

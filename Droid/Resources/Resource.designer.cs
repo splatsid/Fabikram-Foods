@@ -2731,8 +2731,8 @@ namespace Moodify.Droid
 			// aapt resource value: 0x7f0200e9
 			public const int mr_ic_play_light = 2130837737;
 			
-			// aapt resource value: 0x7f0200f2
-			public const int notification_template_icon_bg = 2130837746;
+			// aapt resource value: 0x7f0200f3
+			public const int notification_template_icon_bg = 2130837747;
 			
 			// aapt resource value: 0x7f0200ea
 			public const int places_ic_clear = 2130837738;
@@ -2757,6 +2757,9 @@ namespace Moodify.Droid
 			
 			// aapt resource value: 0x7f0200f1
 			public const int steak = 2130837745;
+			
+			// aapt resource value: 0x7f0200f2
+			public const int wynyardqtr = 2130837746;
 			
 			static Drawable()
 			{

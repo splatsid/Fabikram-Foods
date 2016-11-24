@@ -1,5 +1,6 @@
 ﻿using Android.Locations;
 using Fabikram.DataModels;
+using Fabikram.Views;
 using Moodify.DataModels;
 using Moodify.Views;
 using Newtonsoft.Json;
@@ -46,12 +47,27 @@ namespace Moodify
                 var userJson = await httpClient.GetStringAsync(url);
                 JsonTextReader reader = new JsonTextReader(new StringReader(userJson));
                 stats = JsonConvert.DeserializeObject<RootObject>(userJson);
-                Location.Text = "You are " + stats.rows[0].elements[0].distance.text+ " away from our Restaurant!, it is approximately "+ stats.rows[0].elements[0].duration.text + " away";
+                Location.Text = "You are " + stats.rows[0].elements[0].distance.text+ " away from our Restaurant, it is approximately "+ stats.rows[0].elements[0].duration.text + " away";
 
             }
             catch (Exception e){
                 Location.Text = "";
             }
+        }
+
+        public void GoSecond(object Sender, EventArgs a)
+        {
+            App.RootPage.Detail = new TabbedPage { Children = { new SecondPage(), new TabbedPageMeals() } };
+        }
+
+        public void GoAbout(object Sender, EventArgs a)
+        {
+           
+        }
+
+        public void GoFavourites(object Sender, EventArgs a)
+        {
+            App.RootPage.Detail = new NavigationPage(new Favourites());
         }
     }
 }
