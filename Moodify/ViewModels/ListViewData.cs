@@ -51,14 +51,17 @@ namespace Moodify.ViewModels
 
         public static void populateHashMap()
         {
-            foreach(Product  x in ProductList)
+            if (totalproductlist.Count == 0)
             {
-                totalproductlist.Add(x.easyName, x);
-            }
+                foreach (Product x in ProductList)
+                {
+                    totalproductlist.Add(x.easyName, x);
+                }
 
-            foreach (Product x in DrinkList)
-            {
-                totalproductlist.Add(x.easyName, x);
+                foreach (Product x in DrinkList)
+                {
+                    totalproductlist.Add(x.easyName, x);
+                }
             }
         }
 

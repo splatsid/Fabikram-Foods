@@ -40,7 +40,8 @@ namespace Moodify.Views
             else
             {
                 Activity.IsRunning = true;
-
+                login.IsEnabled = false;
+                signup.IsEnabled = false;
                 List<JsonUserModel> x = await AzureManager.AzureManagerInstance.QueryLogin(Username.Text);
 
                 if (x.Count == 0)
@@ -59,15 +60,17 @@ namespace Moodify.Views
                     App.RootPage.Detail = new NavigationPage(new HomePage());
                     App.isLogin = true;
                     App.RootPage.Master.IsVisible = true;
+                    App.RootPage.Master.IsEnabled = true;
                     userName =Username.Text;
                     usermodel = x[0];
                     ListViewData.populateHashMap();
                     checkFavs();
                 }
 
-                
 
-     
+
+                login.IsEnabled = true;
+                signup.IsEnabled = true;
             
             }
         }

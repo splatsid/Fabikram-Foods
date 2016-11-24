@@ -183,14 +183,6 @@
     <AndroidResource Include="Resources\drawable\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="facebookandroid">
-      <Visible>False</Visible>
-      <Version>4.16.1.0</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="googleplayservices-maps">
-      <Visible>False</Visible>
-      <Version>29.0.0.2</Version>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv7appcompat">
       <Visible>False</Visible>
       <Version>24.2.1.0</Version>

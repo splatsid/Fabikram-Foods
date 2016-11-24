@@ -38,6 +38,7 @@
            />
 
         <Button
+          x:Name="login"
           Clicked ="FacebookLogin"
           Text="Facebook Sign In"
           TextColor="White"
@@ -47,7 +48,8 @@
           FontSize="20"
          />
         </StackLayout>
-        <Button
+          <Button
+            x:Name="signup"
         Clicked ="Signup_Clicked"
         Text="Sign Up"
         TextColor="White"

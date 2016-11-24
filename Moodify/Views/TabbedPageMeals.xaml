@@ -22,6 +22,7 @@
           </ListView.ItemTemplate>
         </ListView>
         <StackLayout>
+          <Label Text="Click on the food to place an order!" TextColor="Black" XAlign="Center"/>
           <StackLayout Orientation="Horizontal" Spacing="10">
             <Button  x:Name="Return" Text="Home" TextColor="White" BackgroundColor ="Blue" Clicked="GoHome" HorizontalOptions="FillAndExpand"/>
             <Button  x:Name="Cart" Text="Cart" TextColor="White" BackgroundColor ="Green" Clicked="GoCart" HorizontalOptions="FillAndExpand" />

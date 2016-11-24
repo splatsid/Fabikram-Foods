@@ -23,7 +23,7 @@ namespace Moodify
             InitializeComponent();
             HeadTitle.Text = "Welcome to Fabikram Foods " + LoginPage.userName;
             System.Diagnostics.Debug.WriteLine(LoginPage.userName);
-           
+            App.RootPage.Master = new MenuPage();
             if (stats == null)
             {
                 getLoc();
@@ -48,9 +48,9 @@ namespace Moodify
                 JsonTextReader reader = new JsonTextReader(new StringReader(userJson));
                 stats = JsonConvert.DeserializeObject<RootObject>(userJson);
                 Location.Text = "You are " + stats.rows[0].elements[0].distance.text+ " away from our Restaurant, it is approximately "+ stats.rows[0].elements[0].duration.text + " away";
-
             }
             catch (Exception e){
+                String x = e.Message;
                 Location.Text = "";
             }
         }

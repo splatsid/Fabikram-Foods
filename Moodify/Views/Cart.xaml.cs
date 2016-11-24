@@ -70,7 +70,7 @@ namespace Fabikram.Views
                 await OrderManager.OrderManagerInstance.AddDetails(order);
                 await DisplayAlert("Complete", "Order Complete, Ready to pick up in 15 minutes", "Ok");
                 ListViewData.CartList.Clear();
-                order.Price = 0;
+                priceView.Text = "Total Price: 0"; 
             }
         }
     }

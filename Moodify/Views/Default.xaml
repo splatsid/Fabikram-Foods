@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fabikram.Views.Default" BackgroundColor="Transparent">
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HeightRequest="75" Padding="0,75,0,0" >
+      <Button x:Name="Login"  Text="Login" TextColor="Black" BackgroundColor="White" Command="{Binding GoLoginCommand}"  />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

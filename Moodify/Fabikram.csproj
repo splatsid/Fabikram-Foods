@@ -60,6 +60,9 @@
     <Compile Include="Views\Cart.xaml.cs">
       <DependentUpon>Cart.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Default.xaml.cs">
+      <DependentUpon>Default.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Favourites.xaml.cs">
       <DependentUpon>Favourites.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\About.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Default.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

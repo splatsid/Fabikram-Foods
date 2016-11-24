@@ -24,7 +24,7 @@
         <StackLayout>
           <Label x:Name ="priceView" FontSize="20" HorizontalOptions="Center" />
           <Button  Text="Order" TextColor="White" BackgroundColor ="Olive" Clicked="OrderNow"/>
-          <Label Text="To cancel any orders please call the restaurant on 021-XXX-XXX" FontSize="20" HorizontalOptions="Center" />
+          <Label Text="To cancel any orders please call the restaurant on 021-XXX-XXX" FontSize="20" HorizontalOptions="Center" XAlign="Center" />
         </StackLayout>
     </StackLayout>
     </ScrollView>

@@ -10,6 +10,8 @@
       <Button  x:Name="About" Text="About us" TextColor="Black" BackgroundColor ="White" Command="{Binding GoAboutCommand}" />
       <Button  x:Name="Favourites" Text="Favourites" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoFavouritesCommand}" />
       <Button  x:Name="Cart" Text="Cart" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoCartCommand}" />
+      <Button  x:Name="LogOut" Text="Log Out" TextColor="Black" BackgroundColor ="White" Command ="{Binding GoLoginCommand}" />
+
 
 
     </StackLayout>

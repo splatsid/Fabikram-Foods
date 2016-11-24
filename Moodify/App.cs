@@ -1,4 +1,5 @@
-﻿using Moodify.Views;
+﻿using Fabikram.Views;
+using Moodify.Views;
 using Xamarin.Forms;
 
 namespace Moodify
@@ -23,14 +24,13 @@ namespace Moodify
 
 		public App()
 		{
-			var menuPage = new MenuPage();
+			var menuPage = new Default();
             var login = new LoginPage();
 			NavigationPage = new NavigationPage(new LoginPage());
 			RootPage = new RootPage();
 			RootPage.Master = menuPage;
 			RootPage.Detail = NavigationPage;
 			MainPage = RootPage;
-            RootPage.Master.IsVisible = false;
 		}
 
 		protected override void OnStart()

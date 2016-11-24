@@ -15,6 +15,7 @@ namespace Moodify
         public ICommand GoLocationCommand { get; set; }
         public ICommand GoCartCommand { get; set; }
         public ICommand GoFavouritesCommand { get; set; }
+        public ICommand GoLoginCommand { get; set; }
         public MenuPageViewModel()
 		{
 			GoHomeCommand = new Command(GoHome);
@@ -22,6 +23,7 @@ namespace Moodify
             GoCartCommand = new Command(GoCart);
             GoFavouritesCommand = new Command(GoFavourites);
             GoAboutCommand = new Command(GoAbout);
+            GoLoginCommand = new Command(Logout);
         }
 
         void GoAbout(Object obj)
@@ -71,6 +73,13 @@ namespace Moodify
             App.MenuIsPresented = false;
         }
 
+        void Logout(Object obj)
+        {
+            App.RootPage.Detail = new NavigationPage(new LoginPage());
+            App.RootPage.Master = new Default();
+            App.MenuIsPresented = false;
+            App.isLogin = false;
+        }
 
     }
 }
